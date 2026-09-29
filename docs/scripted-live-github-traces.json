@@ -1,0 +1,128 @@
+[ {
+  "answer" : "See README.adoc",
+  "steps" : 2,
+  "toolCalls" : 1,
+  "retries" : 0,
+  "stopReason" : "MODEL_FINISH",
+  "trace" : [ {
+    "step" : 1,
+    "action" : "CALL_TOOL",
+    "tool" : "getReadme",
+    "arguments" : "{}",
+    "observation" : "\"FILE README.adoc\\n:spring_version: current\\n:toc:\\n:project_id: gs-rest-service\\n:icons: font\\n:source-highlighter: prettify\\n\\nThis guide walks you through the process of creating a \\\"`Hello, World`\\\" RESTful web\\nservice with Spring.\\n\\n\n[truncated; 6242 chars total]",
+    "elapsedMs" : 214,
+    "continues" : true,
+    "reason" : "CONTINUE"
+  }, {
+    "step" : 2,
+    "action" : "FINISH",
+    "tool" : null,
+    "arguments" : null,
+    "observation" : "Final answer",
+    "elapsedMs" : 0,
+    "continues" : false,
+    "reason" : "MODEL_FINISH"
+  } ]
+}, {
+  "answer" : "See src/main/java/com/jobradar/analysis/deepseek/DeepSeekJobAnalyzer.java",
+  "steps" : 3,
+  "toolCalls" : 2,
+  "retries" : 0,
+  "stopReason" : "MODEL_FINISH",
+  "trace" : [ {
+    "step" : 1,
+    "action" : "CALL_TOOL",
+    "tool" : "searchCode",
+    "arguments" : "{\"keyword\":\"DeepSeek\"}",
+    "observation" : "\"PARTIAL SEARCH: scanned 12 of 93 files; 3 matches. src/main/java/com/jobradar/analysis/deepseek/DeepSeekJobAnalyzer.java: FILE src/main/java/com/jobradar/analysis/deepseek/DeepSeekJobAnalyzer.java package com.jobradar.analysis.deepseek;  i\n[truncated; 919 chars total]",
+    "elapsedMs" : 2805,
+    "continues" : true,
+    "reason" : "CONTINUE"
+  }, {
+    "step" : 2,
+    "action" : "CALL_TOOL",
+    "tool" : "readFile",
+    "arguments" : "{\"path\":\"src/main/java/com/jobradar/analysis/deepseek/DeepSeekJobAnalyzer.java\"}",
+    "observation" : "\"FILE src/main/java/com/jobradar/analysis/deepseek/DeepSeekJobAnalyzer.java\\npackage com.jobradar.analysis.deepseek;\\n\\nimport com.fasterxml.jackson.core.JsonProcessingException;\\nimport com.jobradar.analysis.JobAnalyzer;\\nimport com.jobrad\n[truncated; 6365 chars total]",
+    "elapsedMs" : 136,
+    "continues" : true,
+    "reason" : "CONTINUE"
+  }, {
+    "step" : 3,
+    "action" : "FINISH",
+    "tool" : null,
+    "arguments" : null,
+    "observation" : "Final answer",
+    "elapsedMs" : 0,
+    "continues" : false,
+    "reason" : "MODEL_FINISH"
+  } ]
+}, {
+  "answer" : "See owner/OwnerController.java and owner/OwnerRepository.java",
+  "steps" : 3,
+  "toolCalls" : 2,
+  "retries" : 0,
+  "stopReason" : "MODEL_FINISH",
+  "trace" : [ {
+    "step" : 1,
+    "action" : "CALL_TOOL",
+    "tool" : "readFile",
+    "arguments" : "{\"path\":\"src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java\"}",
+    "observation" : "\"FILE src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java\\n/*\\n * Copyright 2012-2025 the original author or authors.\\n *\\n * Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n * you may not use t\n[truncated; 6581 chars total]",
+    "elapsedMs" : 253,
+    "continues" : true,
+    "reason" : "CONTINUE"
+  }, {
+    "step" : 2,
+    "action" : "CALL_TOOL",
+    "tool" : "readFile",
+    "arguments" : "{\"path\":\"src/main/java/org/springframework/samples/petclinic/owner/OwnerRepository.java\"}",
+    "observation" : "\"FILE src/main/java/org/springframework/samples/petclinic/owner/OwnerRepository.java\\n/*\\n * Copyright 2012-2025 the original author or authors.\\n *\\n * Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n * you may not use t\n[truncated; 2473 chars total]",
+    "elapsedMs" : 255,
+    "continues" : true,
+    "reason" : "CONTINUE"
+  }, {
+    "step" : 3,
+    "action" : "FINISH",
+    "tool" : null,
+    "arguments" : null,
+    "observation" : "Final answer",
+    "elapsedMs" : 0,
+    "continues" : false,
+    "reason" : "MODEL_FINISH"
+  } ]
+}, {
+  "answer" : "See open-ai-examples/src/main/java/OpenAiFunctionCallingExamples.java",
+  "steps" : 3,
+  "toolCalls" : 2,
+  "retries" : 0,
+  "stopReason" : "MODEL_FINISH",
+  "trace" : [ {
+    "step" : 1,
+    "action" : "CALL_TOOL",
+    "tool" : "getFileTree",
+    "arguments" : "{\"depth\":2}",
+    "observation" : "\".github/\\n.github/ISSUE_TEMPLATE/\\n.github/workflows/\\n.gitignore\\n.mvn/\\n.mvn/wrapper/\\n.prettierrc\\nLICENSE\\nREADME.md\\nagentic-tutorial/\\nagentic-tutorial/pom.xml\\nagentic-tutorial/src/\\nanthropic-examples/\\nanthropic-examples/pom.xml\\n\n[truncated; 2786 chars total]",
+    "elapsedMs" : 14,
+    "continues" : true,
+    "reason" : "CONTINUE"
+  }, {
+    "step" : 2,
+    "action" : "CALL_TOOL",
+    "tool" : "readFile",
+    "arguments" : "{\"path\":\"open-ai-examples/src/main/java/OpenAiFunctionCallingExamples.java\"}",
+    "observation" : "\"FILE open-ai-examples/src/main/java/OpenAiFunctionCallingExamples.java\\nimport dev.langchain4j.agent.tool.*;\\nimport dev.langchain4j.data.message.AiMessage;\\nimport dev.langchain4j.data.message.ChatMessage;\\nimport dev.langchain4j.data.mes\n[truncated; 6127 chars total]",
+    "elapsedMs" : 197,
+    "continues" : true,
+    "reason" : "CONTINUE"
+  }, {
+    "step" : 3,
+    "action" : "FINISH",
+    "tool" : null,
+    "arguments" : null,
+    "observation" : "Final answer",
+    "elapsedMs" : 0,
+    "continues" : false,
+    "reason" : "MODEL_FINISH"
+  } ]
+} ]

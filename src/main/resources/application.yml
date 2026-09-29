@@ -1,0 +1,11 @@
+spring:
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:missing-key}
+      base-url: ${LLM_BASE_URL:https://api.openai.com}
+      chat:
+        model: ${LLM_MODEL:gpt-4o-mini}
+    retry:
+      max-attempts: 2
+server:
+  port: 8080
